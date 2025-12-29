@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fafafa;
+}
+
+/* 헤더 */
+.header {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* 전체 레이아웃 */
+.app {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 220px;
+  padding: 12px;
+  border-right: 1px solid #eee;
+  background: #fff;
+}
+
+.category button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.thumbs img {
+  width: 64px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+/* 메인 */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 캔버스 */
+#canvas {
+  width: 90%;
+  height: 70vh;
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  position: relative;
+  touch-action: none;
+}
+
+/* 꽃 */
+.flower-wrap {
+  position: absolute;
+  touch-action: none;
+}
+
+.flower {
+  width: 120px;
+  pointer-events: none;
+}
+
+/* 선택 표시 */
+.flower-wrap.selected {
+  outline: 1px dashed #aaa;
+}
+
+/* 회전 + 크기 핸들 */
+.transform-handle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #111;
+  position: absolute;
+  right: -12px;
+  bottom: -12px;
+  cursor: grab;
+}
+
+/* 하단 버튼 */
+.bottom-controls {
+  margin-top: 12px;
+}
+
+.bottom-controls button {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .category {
+    display: flex;
+    gap: 6px;
+  }
+
+  .thumbs {
+    display: flex;
+  }
+
+  #canvas {
+    width: 95%;
+    height: 60vh;
+  }
+}

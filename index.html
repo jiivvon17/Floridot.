@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>floridot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>floridot</h1>
+</header>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="category">
+      <button onclick="showFlowers('top')">Top</button>
+      <button onclick="showFlowers('middle')">Middle</button>
+      <button onclick="showFlowers('base')">Base</button>
+    </div>
+
+    <div id="thumb-top" class="thumbs"></div>
+    <div id="thumb-middle" class="thumbs"></div>
+    <div id="thumb-base" class="thumbs"></div>
+  </aside>
+
+  <main class="main">
+    <div id="canvas"></div>
+
+    <div class="bottom-controls">
+      <button id="deleteBtn">Delete</button>
+    </div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
